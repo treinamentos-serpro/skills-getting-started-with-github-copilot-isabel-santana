@@ -48,3 +48,15 @@ A aplicação usa um modelo de dados simples com identificadores significativos:
    - Série/Ano escolar
 
 Todos os dados são armazenados em memória, o que significa que os dados serão resetados quando o servidor reiniciar.
+
+## Testes
+
+Execute os comandos a partir da raiz do projeto:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pytest tests/ -v
+```
+
+Os testes usam o `TestClient` do FastAPI, sem precisar iniciar o servidor.
+Cada teste recebe uma cópia independente dos dados em memória.
